@@ -1,5 +1,5 @@
-# AIDext2-Dataset
-Dataset created for the AIDext2
+# AIDetx2-Dataset
+Dataset created for the AIDetx2
 
 
 ## MD5 Checksum Verification
