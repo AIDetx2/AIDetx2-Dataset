@@ -186,8 +186,9 @@ If you use the AIDetx2 dataset in academic work, please cite the corresponding d
   title        = {AIDetx2 Dataset},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {[VERSION]},
-  doi          = {[DOI]}
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.22262415},
+  url          = {https://doi.org/10.5281/zenodo.22262415}
 }
 ```
 
