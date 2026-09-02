@@ -1,63 +1,58 @@
 # AIDetx2-Dataset
-Dataset created for the AIDetx2
 
+Dataset created for the **AIDetx2** project.
 
 ## MD5 Checksum Verification
 
-To ensure the integrity of the dataset files, a file named **`hashes_list.md5`** is provided.  
-This file contains the MD5 checksums for each dataset file, allowing you to verify that the files have not been altered or corrupted.
+To ensure the integrity of the dataset files, a file named **`hashes_list.md5`** is provided.
 
-### How to verify
+This file contains the MD5 checksum of each dataset file, allowing you to verify that the files have not been altered or corrupted.
 
-Run the following command in the directory containing your dataset files:
+### How to Verify
+
+#### Ubuntu / Linux
+
+Run the following command from the directory containing the dataset files and `hashes_list.md5`:
 
 ```bash
 md5sum -c hashes_list.md5
 ```
 
+Each file will be reported as `OK` if its checksum matches the expected value.
+
+#### Windows
+
+Run the provided **`md5sum_windows.ps1`** PowerShell script from the directory containing the dataset files and `hashes_list.md5`:
+
+```powershell
+.\md5sum_windows.ps1
+```
+
+If PowerShell prevents the script from running because of the execution policy, execute:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+and then run the script again.
+
 ## Dataset Metrics
 
+The dataset contains **860,987 text samples**, comprising both human-written and AI-generated texts. The AI-generated samples were produced using multiple large language models (LLMs).
 
-To ensure 
+| Category  |Number of Samples|   Size    |
+| --------- | ---------------:|  ------:  |
+| Human     |          557,735|  2.44GB   |
+| AI        |          365,427|  2.39GB   |
+| **Total** |      **923,162**| **4.83GB**|
 
+### AI Samples by Model
 
-Loaded 367012 AI samples
-Loaded 493975 HUMAN samples
-
-=== SAMPLE RESULTS (first 10) ===
-
-                file label  size_bytes  compression_ratio  bits_per_char
-mistral_7b_ids.jsonl    AI        4989           0.491682       3.933454
-mistral_7b_ids.jsonl    AI        4038           0.439079       3.512630
-mistral_7b_ids.jsonl    AI        5790           0.464767       3.718135
-mistral_7b_ids.jsonl    AI        4937           0.382418       3.059348
-mistral_7b_ids.jsonl    AI        6054           0.481830       3.854642
-mistral_7b_ids.jsonl    AI        6410           0.418565       3.348518
-mistral_7b_ids.jsonl    AI        4448           0.458633       3.669065
-mistral_7b_ids.jsonl    AI        5414           0.481714       3.853713
-mistral_7b_ids.jsonl    AI        5563           0.461262       3.690095
-mistral_7b_ids.jsonl    AI        6653           0.436795       3.494363
-
-=== SUMMARY ===
-
-label  samples  mean_ratio  std_ratio  mean_bpc  std_bpc   mean_size
-   AI   367012    0.465472   0.061200  3.723779 0.489599 6727.701666
-HUMAN   493975    0.456579   0.063697  3.652629 0.509577 4715.893509
-
-=== LENGTH FILTERING ===
-Original samples: 860987
-Filtered samples: 303153
-AI filtered: 109446
-HUMAN filtered: 193707
-
-=== FILTERED SUMMARY ===
-
-label  samples  mean_ratio  std_ratio  mean_bpc  std_bpc   mean_size
-   AI   109446    0.467585   0.028537  3.740678 0.228296 5087.725189
-HUMAN   193707    0.446169   0.044258  3.569351 0.354062 5520.730025
-
-=== PLOTTING DISTRIBUTIONS ===
-
-=== COMPARISON ===
-Mean compression ratio difference (AI - HUMAN): 0.008893835100873326
-Mean bits-per-char difference (AI - HUMAN): 0.07115068080698661
+| Model        | Number of Samples | Proportion  |
+| ------------ | ----------------: | ----------: |
+| DeepSeek     |           102,875 |    19.15%   |
+| GPT-OSS      |            69,988 |    28.15%   |
+| LLaMA        |            61,460 |    16.82%   |
+| Mistral 7B   |            75,351 |    20.62%   |
+| Mistral Nemo |            55,753 |    15.26%   |
+| **Total AI** |       **367,012** |   **100%**  |
