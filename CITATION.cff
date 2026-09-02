@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata below."
+type: dataset
+title: "AIDetx2 AI Text Detection Dataset"
+version: v1.0.0
+date-released: 2026-09-02
+authors:
+  - family-names: Silva
+    given-names: Diogo
+url: "https://github.com/AIDetx2/AIDetx2-Dataset"
+repository-code: "https://github.com/AIDetx2/AIDetx2-Dataset"
+keywords:
+  - AI-generated text detection
+  - natural language processing
+  - dataset
+  - LLM

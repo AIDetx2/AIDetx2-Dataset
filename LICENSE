@@ -1,0 +1,23 @@
+AIDetx2 Dataset — Licensing Notice
+
+This repository does not use a single license for all of its contents.
+The human-written and AI-generated text samples originate from multiple
+external sources and language models, each subject to its own license
+and/or copyright terms. No blanket license (e.g. CC BY 4.0) applies to
+the dataset as a whole.
+
+See the "Licensing and Data Usage" section of README.md for the full
+breakdown of source and model licenses.
+
+Summary:
+  - Human-written samples: rights and license retained by original
+    source (BBC News dataset, News dataset, arXiv, Open Library).
+  - AI-generated samples: subject to the license of the model that
+    generated them (Llama 3.1 Community License, Apache 2.0, or MIT
+    — see README.md for the per-model table).
+  - Dataset organization, document IDs, and metadata created by the
+    authors of this repository are released under CC BY 4.0
+    (https://creativecommons.org/licenses/by/4.0/).
+
+Users are responsible for verifying that their intended use of any
+individual sample complies with the applicable source or model license.
